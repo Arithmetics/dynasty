@@ -1,4 +1,4 @@
-pick_number,name,mfl_player_id,year,position
+pick_number,player_name,mfl_player_id,year_drafted,position
 1,Saquon Barkley,13604,2018,RB
 2,Josh Rosen,13591,2018,QB
 3,Rashaad Penny,13608,2018,RB
