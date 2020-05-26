@@ -36,28 +36,43 @@ def scrape_rankings(link)
   return ranks
 end
 
+def get_new_rankings
+  qb_link = "https://www.fantasypros.com/nfl/rankings/qb-cheatsheets.php"
+  rb_link = "https://www.fantasypros.com/nfl/rankings/half-point-ppr-rb-cheatsheets.php"
+  wr_link = "https://www.fantasypros.com/nfl/rankings/half-point-ppr-wr-cheatsheets.php"
+  te_link = "https://www.fantasypros.com/nfl/rankings/half-point-ppr-te-cheatsheets.php"
+  qb_rankings = scrape_rankings(qb_link)
+  rb_rankings = scrape_rankings(rb_link)
+  wr_rankings = scrape_rankings(wr_link)
+  te_rankings = scrape_rankings(te_link)
+  return qb_rankings.merge(rb_rankings).merge(wr_rankings).merge(te_rankings)
+end
+
+def write_new_csv(drafted_players, old_year, current_year)
+  CSV.open("#{old_year}_draft/player_ranks_#{current_year}.csv", "wb") do |csv|
+    csv << ["player_name", "mfl_player_id", "year", "position", "positional_rank"]
+
+    drafted_players.each do |player|
+      if player["year_drafted"].to_i == old_year
+        csv << [player["player_name"], player["mfl_player_id"], current_year, player["position"], player["positional_rank"]]
+      end
+    end
+  end
+end
+
 #  MAIN #
 current_year = 2020
-qb_link = "https://www.fantasypros.com/nfl/rankings/qb-cheatsheets.php"
-rb_link = "https://www.fantasypros.com/nfl/rankings/half-point-ppr-rb-cheatsheets.php"
-wr_link = "https://www.fantasypros.com/nfl/rankings/half-point-ppr-wr-cheatsheets.php"
-te_link = "https://www.fantasypros.com/nfl/rankings/half-point-ppr-te-cheatsheets.php"
 
 mfl_to_fft = load_crosswalk()
 drafted_players = load_draft_picks()
-
-qb_rankings = scrape_rankings(qb_link)
-rb_rankings = scrape_rankings(rb_link)
-wr_rankings = scrape_rankings(wr_link)
-te_rankings = scrape_rankings(te_link)
-
-all_rankings = qb_rankings.merge(rb_rankings).merge(wr_rankings).merge(te_rankings)
+all_new_rankings = get_new_rankings()
 
 drafted_players.each do |player|
   fft_id = mfl_to_fft[player["mfl_player_id"]]
-  player["positional_rank"] = all_rankings[fft_id].to_i
+  player["positional_rank"] = all_new_rankings[fft_id].to_i
 end
 
 drafted_players.each { |player| puts "#{player["player_name"]} - #{player["positional_rank"]}" }
 
-puts drafted_players.length
+write_new_csv(drafted_players, 2018, 2020)
+write_new_csv(drafted_players, 2019, 2020)
