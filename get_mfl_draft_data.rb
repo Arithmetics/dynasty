@@ -24,7 +24,7 @@ end
 ##### MAIN #####
 
 league_id = 20896
-draft_year = 2019
+draft_year = 2020
 doc = Nokogiri::HTML(open("http://www67.myfantasyleague.com/#{draft_year}/options?L=#{league_id}&O=17"))
 rows = doc.css(".report")[0].css("tr")
 draft_picks = []
