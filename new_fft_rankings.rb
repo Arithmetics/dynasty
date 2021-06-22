@@ -21,45 +21,23 @@ def load_draft_picks
   return players
 end
 
-# def scrape_rankings(link)
-#   ranks = {}
-#   doc = Nokogiri::HTML(open(link))
-#   # data_rows = doc.css("#rank-data").css("tbody").css("tr").css("player-row")
-#   data_rows = doc.css("#rank-data").css("tbody").css("tr")
-
-#   data_rows.each do |row|
-#     mfl_player_id = row["data-id"]
-#     if mfl_player_id != nil
-#       ranks[mfl_player_id] = row.css(".sticky-cell-one").text()
-#     end
-#   end
-
-#   return ranks
-# end
 
 def get_rankings_from_json(filename)
   ranks = {}
   file = File.read(filename)
   data_hash = JSON.parse(file)
   data_hash["players"].each do |player|
-    mfl_player_id = row["player_id"]
-    ranks[mfl_player_id] = row["rank_ecr"]
+    mfl_player_id = player["player_id"].to_s
+    ranks[mfl_player_id] = player["rank_ecr"]
   end
+  return ranks
 end
 
 def get_new_rankings
-  # qb_link = "https://www.fantasypros.com/nfl/rankings/qb-cheatsheets.php"
-  # rb_link = "https://www.fantasypros.com/nfl/rankings/half-point-ppr-rb-cheatsheets.php"
-  # wr_link = "https://www.fantasypros.com/nfl/rankings/half-point-ppr-wr-cheatsheets.php"
-  # te_link = "https://www.fantasypros.com/nfl/rankings/half-point-ppr-te-cheatsheets.php"
   qb_rankings = get_rankings_from_json("./qb.json")
-  # qb_rankings = scrape_rankings(qb_link)
   rb_rankings = get_rankings_from_json("./rb.json")
-  # rb_rankings = scrape_rankings(rb_link)
   wr_rankings = get_rankings_from_json("./wr.json")
-  # wr_rankings = scrape_rankings(wr_link)
   te_rankings = get_rankings_from_json("./te.json")
-  # te_rankings = scrape_rankings(te_link)
   return qb_rankings.merge(rb_rankings).merge(wr_rankings).merge(te_rankings)
 end
 
@@ -76,7 +54,7 @@ def write_new_csv(drafted_players, old_year, current_year)
 end
 
 #  MAIN #
-current_year = 2020
+current_year = 2021
 
 mfl_to_fft = load_crosswalk()
 drafted_players = load_draft_picks()
@@ -89,5 +67,7 @@ end
 
 drafted_players.each { |player| puts "#{player["player_name"]} - #{player["positional_rank"]}" }
 
-write_new_csv(drafted_players, 2018, 2020)
-write_new_csv(drafted_players, 2019, 2020)
+write_new_csv(drafted_players, 2018, 2021)
+write_new_csv(drafted_players, 2019, 2021)
+write_new_csv(drafted_players, 2020, 2021)
+write_new_csv(drafted_players, 2021, 2021)
