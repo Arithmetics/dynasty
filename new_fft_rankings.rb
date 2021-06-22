@@ -67,7 +67,7 @@ end
 
 drafted_players.each { |player| puts "#{player["player_name"]} - #{player["positional_rank"]}" }
 
-write_new_csv(drafted_players, 2018, 2021)
-write_new_csv(drafted_players, 2019, 2021)
-write_new_csv(drafted_players, 2020, 2021)
+# write_new_csv(drafted_players, 2018, 2021)
+# write_new_csv(drafted_players, 2019, 2021)
+# write_new_csv(drafted_players, 2020, 2021)
 write_new_csv(drafted_players, 2021, 2021)
