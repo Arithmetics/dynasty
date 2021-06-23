@@ -143,7 +143,6 @@ Bo Scarbrough,13615,2018,RB,86
 John Kelly,13619,2018,RB,53
 Keke Coutee,13662,2018,WR,84
 DaeSean Hamilton,13649,2018,WR,99
-player_name,mfl_player_id,year,position,positional_rank
 Josh Jacobs,14073,2020,RB,9
 Kyler Murray,14056,2020,QB,5
 David Montgomery,14071,2020,RB,25
@@ -252,7 +251,6 @@ Diontae Johnson,14208,2019,WR,90
 Jalen Hurd,14116,2019,WR,93
 Will Grier,14062,2019,QB,40
 Kelvin Harmon,14114,2019,WR,100
-player_name,mfl_player_id,year,position,positional_rank
 Joe Burrow,14777,2020,QB,21
 Jonathan Taylor,14802,2020,RB,19
 Clyde Edwards-Helaire,14803,2020,RB,16
@@ -349,7 +347,6 @@ Adam Trautman,14870,2021,TE,27
 Michael Warren,14816,2021,RB,999
 Isaiah Hodgins,14849,2021,WR,999
 Albert Okwuegbunam,14873,2021,TE,47
-player_name,mfl_player_id,year,position,positional_rank
 Trevor Lawrence,15237,2021,QB,16
 Najee Harris,15254,2021,RB,14
 Kyle Pitts,15329,2021,TE,6
