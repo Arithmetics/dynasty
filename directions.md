@@ -3,3 +3,4 @@
 3. copy out 'ecrRankings' into json files
 4. fill in all_draft_picks
 r. run new_fft_rankings
+6. replace all 999

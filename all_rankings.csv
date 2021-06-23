@@ -39,7 +39,7 @@ Saquon Barkley,13604,2021,RB,5
 Josh Rosen,13591,2021,QB,0
 Rashaad Penny,13608,2021,RB,53
 Sam Darnold,13592,2021,QB,25
-Derrius Guice,13605,2021,RB,0
+Derrius Guice,13605,2021,RB,999
 Ronald Jones,13606,2021,RB,30
 Royce Freeman,13617,2021,RB,103
 Sony Michel,13607,2021,RB,55
@@ -55,7 +55,7 @@ Lamar Jackson,13593,2021,QB,4
 Kerryon Johnson,13612,2021,RB,74
 Mike Gesicki,13672,2021,TE,11
 Anthony Miller,13639,2021,WR,85
-Dante Pettis,13634,2021,WR,0
+Dante Pettis,13634,2021,WR,999
 Michael Gallup,13646,2021,WR,46
 James Washington,13631,2021,WR,89
 Jordan Wilkins,13789,2021,RB,96
@@ -170,7 +170,7 @@ JJ Arcega-Whiteside,14107,2020,WR,98
 Andy Isabella,14121,2020,WR,86
 Irv Smith Jr.,14141,2020,TE,23
 Drew Lock,14057,2020,QB,23
-Andrew Beck,14319,2020,TE,0
+Andrew Beck,14319,2020,TE,999
 Benny Snell,14072,2020,RB,118
 Ryquell Armstead,14093,2020,RB,61
 Miles Boykin,14125,2020,WR,82
@@ -196,7 +196,7 @@ Parris Campbell,14112,2021,WR,64
 Mecole Hardman,14113,2021,WR,58
 Darrell Henderson,14087,2021,RB,47
 Devin Singletary,14080,2021,RB,41
-Hakeem Butler,14106,2021,WR,0
+Hakeem Butler,14106,2021,WR,999
 Alexander Mattison,14223,2021,RB,52
 Damien Harris,14075,2021,RB,32
 Darwin Thompson,14284,2021,RB,111
@@ -206,8 +206,8 @@ JJ Arcega-Whiteside,14107,2021,WR,172
 Andy Isabella,14121,2021,WR,106
 Irv Smith Jr.,14141,2021,TE,13
 Drew Lock,14057,2021,QB,35
-Andrew Beck,14319,2021,TE,0
-Benny Snell,14072,2021,RB,0
+Andrew Beck,14319,2021,TE,999
+Benny Snell,14072,2021,RB,999
 Ryquell Armstead,14093,2021,RB,98
 Miles Boykin,14125,2021,WR,109
 Daniel Jones,14059,2021,QB,19
@@ -341,13 +341,13 @@ James Proche,14848,2021,WR,0
 Quintez Cephus,14850,2021,WR,102
 Antonio Gandy-Golden,14863,2021,WR,118
 Devin Asiasi,14936,2021,TE,75
-LeVante Bellamy,14830,2021,RB,0
+LeVante Bellamy,14830,2021,RB,999
 Eno Benjamin,14801,2021,RB,95
 Lamical Perine,14806,2021,RB,69
 DeeJay Dallas,14815,2021,RB,88
 Adam Trautman,14870,2021,TE,27
-Michael Warren,14816,2021,RB,0
-Isaiah Hodgins,14849,2021,WR,0
+Michael Warren,14816,2021,RB,999
+Isaiah Hodgins,14849,2021,WR,999
 Albert Okwuegbunam,14873,2021,TE,47
 player_name,mfl_player_id,year,position,positional_rank
 Trevor Lawrence,15237,2021,QB,16
@@ -390,7 +390,7 @@ Hunter Long,15334,2021,TE,58
 Tre McKitty,15333,2021,TE,79
 Tamorrion Terry,15318,2021,WR,147
 Elijah Mitchell,15263,2021,RB,104
-Jacob Harris,15425,2021,WR,0
+Jacob Harris,15425,2021,WR,999
 Khalil Herbert,15271,2021,RB,112
 Tommy Tremble,15332,2021,TE,62
 Brevin Jordan,15330,2021,TE,48
