@@ -54,7 +54,7 @@ def write_new_csv(drafted_players, old_year, current_year)
 end
 
 #  MAIN #
-current_year = 2021
+current_year = 2022
 
 mfl_to_fft = load_crosswalk()
 drafted_players = load_draft_picks()
@@ -67,7 +67,7 @@ end
 
 drafted_players.each { |player| puts "#{player["player_name"]} - #{player["positional_rank"]}" }
 
-# write_new_csv(drafted_players, 2018, 2021)
-# write_new_csv(drafted_players, 2019, 2021)
-# write_new_csv(drafted_players, 2020, 2021)
-write_new_csv(drafted_players, 2021, 2021)
+write_new_csv(drafted_players, 2018, current_year)
+write_new_csv(drafted_players, 2019, current_year)
+write_new_csv(drafted_players, 2020, current_year)
+write_new_csv(drafted_players, 2021, current_year)
