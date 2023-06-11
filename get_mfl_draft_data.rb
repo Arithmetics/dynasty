@@ -41,6 +41,16 @@ end
 CSV.open("player_crosswalk_#{draft_year}.csv", "w") do |csv|
   csv << ["player_name", "mfl_player_id", "fft_player_id"]
   draft_picks.each do |pick|
-    csv << ["#{pick[:player_first_name]} #{pick[:player_last_name]}", pick[:mfl_player_id]]
+    csv << ["#{pick[:player_first_name]} #{pick[:player_last_name]}", pick[:mfl_player_id], pick[:position], pick[:owner_id]]
+  end
+end
+
+
+CSV.open("all_picks_#{draft_year}.csv", "w") do |csv|
+  csv << ["pick_number","player_name","mfl_player_id","year_drafted","position","owner_id"]
+  num = 1
+  draft_picks.each do |pick|
+    csv << [num, "#{pick[:player_first_name]} #{pick[:player_last_name]}", pick[:mfl_player_id], draft_year, pick[:position], pick[:owner_id]]
+    num = num + 1
   end
 end

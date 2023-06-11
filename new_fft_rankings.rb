@@ -54,7 +54,7 @@ def write_new_csv(drafted_players, old_year, current_year)
 end
 
 #  MAIN #
-current_year = 2022
+current_year = 2023
 
 mfl_to_fft = load_crosswalk()
 drafted_players = load_draft_picks()
@@ -71,3 +71,5 @@ write_new_csv(drafted_players, 2018, current_year)
 write_new_csv(drafted_players, 2019, current_year)
 write_new_csv(drafted_players, 2020, current_year)
 write_new_csv(drafted_players, 2021, current_year)
+write_new_csv(drafted_players, 2022, current_year)
+write_new_csv(drafted_players, 2023, current_year)
