@@ -59,7 +59,7 @@ end
 files = Dir["2022_draft/*.csv"]
 file_contents = files.map { |f| CSV.read(f) }
 
-csv_string2021 = CSV.generate do |csv|
+csv_string2022 = CSV.generate do |csv|
   csv << csv_headers
   file_contents.each do |file|
     file.shift                  # remove the headers of each file
@@ -72,7 +72,7 @@ end
 files = Dir["2023_draft/*.csv"]
 file_contents = files.map { |f| CSV.read(f) }
 
-csv_string2021 = CSV.generate do |csv|
+csv_string2023 = CSV.generate do |csv|
   csv << csv_headers
   file_contents.each do |file|
     file.shift                  # remove the headers of each file
